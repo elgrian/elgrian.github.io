@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>"Users folio"</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+
+    <!-- LINK TO CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- CONTAINERS CONTAINER lol -->
+    <div>
+      <!-- 
+            Currently just researching which sites are able to have their x-options
+            bypassed in order to allow viewing within an iframe, so disregard the iframe source. 
+    -->
+      <div class="container">
+        <header class="header">
+          <div class="iframe-container">
+            <iframe
+              class="iframe"
+              name="change-website"
+              src="https://www.etsy.com"
+            ></iframe>
+          </div>
+          <div class="header-container">
+            <div class="logo">
+              <!-- COMPANY LOGO GOES HERE -->
+            </div>
+
+            <!-- TOP NAV BAR -->
+            <nav class="nav-bar" id="nav">
+              <ul class="nav-list">
+                <li class="nav-list-item nav-active">
+                  <a href="http://127.0.0.1:5500/index.html">Home</a>
+                </li>
+                <li class="nav-list-item">
+                  About
+                  <div class="sub-list-container">
+                    <ul class="sub-list">
+                      <li class="sub-item">About Our Company</li>
+                      <li class="sub-item">Our Mission</li>
+                      <li class="sub-item">Happy Clients</li>
+                      <li class="sub-item">Team</li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-list-item">
+                  <a href="#modal-item">Instructions</a>
+                </li>
+              </ul>
+              <div class="toggle-nav-off">
+                <a href="#"
+                  ><img
+                    src="https://icon-icons.com/icons2/1157/PNG/512/1487086345-cross_81577.png"
+                    alt="Close Icon"
+                    width="30"
+                    height="30"
+                /></a>
+              </div>
+            </nav>
+            <!-- MOBILE NAV BAR HAMBURGER -->
+            <div class="toggle-nav">
+              <a href="#nav"
+                ><img
+                  src="https://cdn2.iconfinder.com/data/icons/menu-elements/154/menu-round-512.png"
+                  alt="Close Icon"
+                  width="30"
+                  height="30"
+              /></a>
+            </div>
+
+            <!-- ADDED THIS DIV BECAUSE IT WAS MISSING? COULD BE SOLUTION TO MY PROBLEMS, GOES TO HEADER-CONTAINER  -->
+          </div>
+        </header>
+        <!-- COMPANY LOGO SIDEBAR -->
+        <div class="side-bar">
+          <ul class="item-list">
+            <li class="item active">
+              <a
+                href="https://www.behance.net/rodrigo_maltchique"
+                target="change-website"
+                ><img
+                  id="behance"
+                  src="images/behance.png"
+                  width="50"
+                  height="50"
+                  class="item-img"
+                />
+                <p>Behance</p>
+              </a>
+            </li>
+            <li class="item">
+              <a href="https://dribbble.com/lobanovskiy" target="change-website"
+                ><img
+                  id="dribble"
+                  src="images/dribble3.png"
+                  width="50"
+                  height="50"
+                  class="item-img"
+                />
+                <p>Dribble</p>
+              </a>
+            </li>
+            <li class="item">
+              <a
+                href="https://www.etsy.com/shop/WeeLittleHedgehog?ref=simple-shop-header-name&listing_id=476658981"
+                target="change-website"
+                ><img
+                  id="etsy"
+                  src="images/etsy11.png"
+                  width="50"
+                  height="50"
+                  class="item-img"
+                />
+                <p>Etsy</p>
+              </a>
+            </li>
+            <li class="item">
+              <a href="https://www.flickr.com" target="change-website"
+                ><img
+                  id="flickr"
+                  src="images/flick2.png"
+                  width="50"
+                  height="50"
+                  class="item-img"
+                />
+                <p>Flickr</p>
+              </a>
+            </li>
+            <li class="item">
+              <a
+                href="https://www.instagram.com/onwheez"
+                target="change-website"
+                ><img
+                  id="instagram"
+                  src="images/Instagram_AppIcon_Aug2017.png"
+                  width="50"
+                  height="50"
+                  class="item-img"
+                />
+                <p>Instagram</p>
+              </a>
+            </li>
+            <li class="item">
+              <a href="https://www.pinterest.com" target="change-website"
+                ><img
+                  id="pinterest"
+                  src="images/pinterest3.png"
+                  width="50"
+                  height="50"
+                  class="item-img"
+                />
+                <p>Pinterest</p>
+              </a>
+            </li>
+            <!-- <li class="item"><a href="https://www.twitch.com/twitchpresents" target="change-website"><img id="flickr" src="images/twitch3.png" width="50" height="50" class="item-img"/>Twitch</a></li> -->
+          </ul>
+        </div>
+        <!-- LEFT SIDE BAR MOBILE I THINK I FORGOT WHAT I DID THIS FOR -->
+        <div class="left-side-bar">
+          <p></p>
+        </div>
+        <div class="main-content">
+          <div class="modal" id="modal-item">
+            <div class="modal-item">
+              <div class="toggle-modal">
+                <a href="#"
+                  ><img
+                    src="images/close-button.png"
+                    alt="Close Icon"
+                    width="30"
+                    height="30"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BOTTOM BLACK FRAME -->
+        <div class="bottom"></div>
+        <!-- RIGHT BLACK FRAME -->
+        <div class="right"></div>
+        <!-- MOBILE LEFT FRAME -->
+        <div class="mobile-left"></div>
+      </div>
+    </div>
+
+    <link rel="stylesheet" href="scripts.js" />
+  </body>
+</html>

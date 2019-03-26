@@ -1,0 +1,1193 @@
+/* .iframe-container {
+  position: inherit;
+  overflow: scroll;
+} */
+
+
+
+@media screen and (max-height: 821px) {
+  body {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+
+    box-sizing: border-box !important;
+
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  a:hover,
+  a:link,
+  a:active {
+    text-decoration: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    position: absolute;
+    overflow: hidden;
+  }
+
+  .main-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 500px 100px;
+    transition: transform .3s ease;
+  }
+
+  .header {
+    width: 100%;
+    height: 56px;
+    background: black;
+  }
+
+  .header-container {
+    height: 100%;
+    padding: 0% 23%;
+    margin: 0% auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .bottom,
+  .right {
+    position: fixed;
+    background: black;
+  }
+
+  .right {
+    top: 0;
+    bottom: 0;
+    width: 4%;
+    right: 0;
+  }
+
+  .bottom {
+    left: 0;
+    right: 0;
+    height: 5.5%;
+    bottom: 0;
+  }
+
+  /* FOR FUTURE LOGO
+
+    .logo {
+      width: 100%;
+    } */
+
+  .nav-bar {
+    display: flex;
+    flex-direction: row;
+    width: 65%;
+    align-items: center;
+    align-self: stretch;
+  }
+
+
+  .nav-list {
+    list-style: none;
+    padding: 31.5%;
+    margin: 0%;
+    width: 120%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+
+  .nav-list-item {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: -23.5vw;
+    transition: color .3s ease;
+    color: #989797;
+  }
+
+  .nav-list-item:not(:last-child) {
+    margin-right: 71%;
+  }
+
+
+  .sub-list-container {
+    overflow: hidden;
+    position: absolute;
+    top: 6.7vh;
+    left: 1.5vw;
+    transform: translateX(-50%);
+    /* If we need show/hide feature */
+    height: inherit;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease;
+  }
+
+  .sub-list {
+    width: 15vw;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: black;
+  }
+
+
+  .sub-item {
+    color: #989797;
+    font-size: 80%;
+    padding: 8%;
+    position: relative;
+    align-self: stretch;
+    text-align: center;
+    z-index: 2;
+    transition: color .3s ease;
+  }
+
+  .sub-item:hover {
+    color: white;
+  }
+
+  .sub-item::before {
+    z-index: 1;
+  }
+
+  .nav-list-item:hover {
+    cursor: pointer;
+    color: gold;
+  }
+
+  .nav-list-item:hover .sub-list-container {
+    /* For show/hide feature */
+    visibility: visible;
+    opacity: 0.9;
+  }
+
+  .toggle-nav {
+    display: none;
+  }
+
+  .toggle-nav-off {
+    display: none;
+  }
+
+  /* Code for the side-bar starts here */
+  .side-bar {
+    position: absolute;
+    top: 5%;
+    left: 0%;
+    width: 10%;
+    /* Initial width according to size of image  */
+    height: calc(100%);
+    background: black;
+    color: white;
+    overflow: hidden;
+    /*gives as the List is having width larger than the initial width of the side-bar */
+    transition: all .3s ease;
+  }
+
+  .side-bar {
+    width: 10%;
+  }
+
+  /* .side-bar-left {
+    position: absolute;
+    top: 3%;
+    left: 0%;
+    width: 60px; */
+  /* Initial width according to size of image  */
+  /* height: calc(100% - 56px);
+    background: black;
+    color: white;
+    overflow: hidden; */
+  /* Imp to give as the List is having width larger than the initial width of the side-bar */
+  /* transition: all .3s ease;
+    width: 250px;
+  } */
+
+
+  .item-list {
+    list-style: none;
+    width: 100%;
+    left: -28%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+  }
+
+  .item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: stretch;
+    padding: 20% 30%;
+    transition: all .5s ease;
+    position: relative;
+    color: #989797;
+  }
+
+  .item:not(:last-child) {
+    margin-bottom: -7.5%;
+  }
+
+  .item:hover {
+    color: white;
+    cursor: pointer;
+  }
+
+  .item-img {
+    margin-right: 10%;
+    width: 10%;
+    height: 10%;
+    padding: 0% 10%;
+    transition: all .3s ease;
+  }
+
+
+
+  .item #instagram {
+    width: 3.9vw;
+    height: 7vh;
+    margin-left: calc(100% + 1.6vw);
+  }
+
+  .item #etsy {
+    width: 9vw;
+    height: 9vh;
+    margin-left: calc(100% - 2.5vw);
+  }
+
+  .item #behance {
+    width: 5.3vw;
+    height: 9vh;
+    margin-left: calc(100% + 1.3vw);
+
+  }
+
+  .item #flickr {
+    width: 5vw;
+    height: 9vh;
+    margin-left: calc(100% - 0.1489vw);
+  }
+
+  .item #dribble {
+    width: 5.2vw;
+    height: 9vh;
+    margin-left: calc(100% + 1.3vw);
+    ;
+  }
+
+  .item #pinterest {
+    width: 4.9vw;
+    height: vh;
+    margin-left: calc(100% + 1.505vw);
+  }
+
+  /* Code for the HOVER effect on the list items */
+  .item::before {
+    transform: scaleY(0);
+    width: 1%;
+    transition: transform .2s ease, width .3s .2s ease;
+  }
+
+  .sub-item::before {
+    width: 0px;
+    transition: transform .1s ease, width .2s .1s ease;
+  }
+
+  .item::before,
+  .sub-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(to bottom right, #ff506e, black);
+    z-index: -1;
+  }
+
+  .item:hover::before {
+    transform: scaleY(1);
+  }
+
+  .item:hover::before,
+  .sub-item:hover::before {
+    width: 100%;
+  }
+
+  .active {
+    color: #989797;
+    /* background: linear-gradient(to bottom right, #ff506e, black); THIS MAKES THE FIRST BUTTON ALWAYS RED AND HIGHLIGHTED, WHICH WE DON'T WANT */
+  }
+
+  .nav-active {
+    color: #989797;
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(200deg, 50%, 92%);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease;
+  }
+
+  .modal-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("https://37.media.tumblr.com/53fc4e7e4096cba63c0133167a4b6168/tumblr_n33ukkyWLN1rwhqloo1_500.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15%;
+    padding: 0.4%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform .3s ease;
+  }
+
+  .toggle-modal {
+    position: absolute;
+    top: 34%;
+    left: 65%;
+  }
+
+  /* Opening modal using CSS */
+  :target {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  :target .modal-item {
+    transform: translate(-50%, -50%) scale(3);
+  }
+
+
+  .iframe {
+    /* 1440p monitor */
+    position: absolute;
+    margin-left: 10.031%;
+    bottom: 5.50%;
+    height: 87.65%;
+    width: 85.99%;
+    border: black;
+
+  }
+}
+
+
+@media screen and (min-height: 822px) {
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    box-sizing: border-box !important;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  a:hover,
+  a:link,
+  a:active {
+    text-decoration: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+    {
+    margin: 0;
+  }
+
+  /* .side-bar(:nth-child(p {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+  } */
+
+  .container {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    position: absolute;
+    overflow: hidden;
+  }
+
+  .main-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 500px 100px;
+    transition: transform .3s ease;
+  }
+
+  .header {
+    width: 100%;
+    height: 55px;
+    background: black;
+  }
+
+  .header-container {
+    height: 100%;
+    padding: 0% 23%;
+    margin: 0% auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  .bottom,
+  .right {
+    position: fixed;
+    background: black;
+  }
+
+  .right {
+    top: 0;
+    bottom: 0;
+    width: 4%;
+    right: 0;
+  }
+
+  .bottom {
+    left: 0;
+    right: 0;
+    height: 5.5%;
+    bottom: 0;
+  }
+
+  /* FOR FUTURE LOGO */
+
+  .logo {
+    width: 100%;
+  }
+
+  .nav-bar {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    align-items: center;
+    align-self: stretch;
+  }
+
+
+  .nav-list {
+    list-style: none;
+    padding: 50vw;
+    margin: 0%;
+    width: 12%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+
+  .nav-list-item {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: -23.5vw;
+    transition: color .3s ease;
+    color: #989797;
+  }
+
+  .nav-list-item:not(:last-child) {
+    margin-right: 71%;
+  }
+
+
+  .sub-list-container {
+    overflow: hidden;
+    position: absolute;
+    top: 4vh;
+    left: 1vw;
+    transform: translateX(-50%);
+    /* If we need show/hide feature */
+    height: inherit;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease;
+  }
+
+  .sub-list {
+    width: 8vw;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: black;
+  }
+
+
+  .sub-item {
+    color: #989797;
+    font-size: 100%;
+    padding: 8%;
+    position: relative;
+    align-self: stretch;
+    text-align: center;
+    z-index: 2;
+    transition: color .3s ease;
+  }
+
+  .sub-item:hover {
+    color: white;
+  }
+
+  .sub-item::before {
+    z-index: 1;
+  }
+
+  .nav-list-item:hover {
+    cursor: pointer;
+    color: gold;
+  }
+
+  .nav-list-item:hover .sub-list-container {
+    /* For show/hide feature */
+    visibility: visible;
+    opacity: 0.9;
+  }
+
+  .toggle-nav {
+    display: none;
+  }
+
+  .toggle-nav-off {
+    display: none;
+  }
+
+  /* Code for the side-bar starts here */
+  .side-bar {
+    position: absolute;
+    top: 4%;
+    left: 0%;
+    height: 100%;
+    width: 10%;
+    /* Initial width according to size of image height: calc(100%); */
+    background: black;
+    color: white;
+    overflow: hidden;
+    /* gives as the List is having width larger than the initial width of the side-bar */
+    transition: all .3s ease;
+  }
+
+  .side-bar {
+    width: 8%;
+  }
+
+  .side-bar-left {
+    position: absolute;
+    top: 4%;
+    left: 0%;
+    width: 60px;
+    Initial width according to size of image height: calc(100% - 56px);
+    background: black;
+    color: white;
+    overflow: hidden;
+    /* Imp to give as the List is having width larger than the initial width of the side-bar */
+    transition: all .3s ease;
+    width: 250px;
+  }
+
+
+  .item-list {
+    list-style: none;
+    width: 115%;
+    left: -36%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+  }
+
+  .item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: stretch;
+    padding: 22% 30%;
+    transition: all .5s ease;
+    position: relative;
+    color: #989797;
+  }
+
+  .item:not(:last-child) {
+    margin-bottom: 1%;
+  }
+
+  .item:hover {
+    color: white;
+    cursor: pointer;
+  }
+
+  .item-img {
+    margin-right: 10%;
+    width: 10%;
+    height: 5%;
+    padding: 0% 1%;
+    transition: all .3s ease;
+  }
+
+  .item #dribble,
+  .item #behance,
+  .item #flickr {
+    width: 3.5vw;
+    height: 7vh;
+  }
+
+  .item #instagram {
+    width: 3vw;
+    height: 6vh;
+    margin-left: 10%;
+  }
+
+  .item #etsy {
+    width: 6vw;
+    height: 7vh;
+    margin-left: calc(100% - 5.9vw);
+  }
+
+  .item #behance {
+    margin-left: calc(100% + -3.4vw);
+  }
+
+  .item #flickr {
+    margin-left: calc(100% + -4.5vw);
+  }
+
+  .item #dribble {
+    margin-left: calc(100% + -3.8vw);
+    ;
+  }
+
+  .item #pinterest {
+    width: 3.5vw;
+    height: 7vh;
+    margin-left: calc(100% + -3.5vw);
+  }
+
+  /* Code for the HOVER effect on the list items */
+  .item::before {
+    transform: scaleY(0);
+    width: 1%;
+    transition: transform .2s ease, width .3s .2s ease;
+  }
+
+  .sub-item::before {
+    width: 0px;
+    transition: transform .1s ease, width .2s .1s ease;
+  }
+
+  .item::before,
+  .sub-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(to bottom right, #ff506e, black);
+    z-index: -1;
+  }
+
+  .item:hover::before {
+    transform: scaleY(1);
+  }
+
+  .item:hover::before,
+  .sub-item:hover::before {
+    width: 100%;
+  }
+
+  .active {
+    color: #989797;
+    /* background: linear-gradient(to bottom right, #ff506e, black); THIS MAKES THE FIRST BUTTON ALWAYS RED AND HIGHLIGHTED, WHICH WE DON'T WANT */
+  }
+
+  .nav-active {
+    color: #989797;
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(200deg, 50%, 92%);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease;
+  }
+
+  .modal-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("https://37.media.tumblr.com/53fc4e7e4096cba63c0133167a4b6168/tumblr_n33ukkyWLN1rwhqloo1_500.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15%;
+    padding: 0.4%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform .3s ease;
+  }
+
+  .toggle-modal {
+    position: absolute;
+    top: 39%;
+    left: 41%;
+  }
+
+  /* Opening modal using CSS */
+  :target {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  :target .modal-item {
+    transform: translate(-50%, -50%) scale(3);
+  }
+
+
+  .iframe {
+    /* 2560+px width monitor */
+    position: absolute;
+    margin-left: 8.01%;
+    bottom: 3.98%;
+    height: 91.96%;
+    width: 89.99%;
+    border: black;
+
+  }
+}
+
+@media screen and (max-width: 600px) {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    box-sizing: border-box !important;
+    overflow: hidden;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  a>p {
+    visibility: hidden;
+  }
+
+  .header {
+    width: 100%;
+    height: 10.399vh;
+    background: black;
+  }
+
+  .header-container {
+    height: 100%;
+    padding: 0% 23%;
+    margin: 0% auto;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .nav-bar {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: inherit;
+    background-color: black;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 8888;
+    transition: height .3s .1s ease;
+  }
+
+
+  /* TOP NAV LIST */
+  .nav-list {
+    list-style: none;
+    padding: 25.5%;
+    margin: 0%;
+    width: 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-evenly;
+    height: 10%;
+    /*
+      Initially list will be hidden and will reappear once the
+      nav-bar is opened
+    */
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .2s ease, opacity .2s ease;
+  }
+
+  a {
+    justify-content: center;
+  }
+
+  .nav-list-item {
+    margin: 0px auto 20px 25vw !important;
+    border-bottom: 2px solid white;
+    width: 80%;
+    justify-content: center;
+    padding: 25% 0;
+  }
+
+
+  .nav-list-item {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: -23.5vw;
+    transition: color .3s ease;
+    color: #989797;
+  }
+
+  .sub-list-container {
+    display: none;
+  }
+
+
+
+
+  /* NAV HAMBURGER */
+  .toggle-nav {
+    display: block;
+    position: absolute;
+    left: 10px;
+  }
+
+  /* NAV OFF */
+  .toggle-nav-off {
+    display: flex;
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    top: 60%;
+  }
+
+  :target {
+    /* Defining the height of the shutter effect */
+    height: calc(100vh);
+  }
+
+  :target .nav-list {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility .2s .2s ease, opacity .2s .2s ease;
+  }
+
+  /* INSTRUCTIONS POPUP */
+  .toggle-modal {
+    position: absolute;
+    top: 3%;
+    left: 2%;
+  }
+
+  /* Opening instructions using CSS */
+  :target {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  :target .modal-item {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  /* SIDEBAR FOR MOBILE ***TOP VIEW*** */
+  .side-bar {
+    top: 0%;
+    left: 10%;
+    width: 100%;
+    /* Initial width according to size of image */
+    height: calc(100%);
+    background: black;
+    color: white;
+    overflow: hidden;
+    /*gives as the List is having width larger than the initial width of the side-bar */
+    transition: all .3s ease;
+  }
+
+  .side-bar {
+    display: flex;
+    position: absolute;
+    left: 10%;
+    width: 100%;
+    height: 10.4%
+  }
+
+  /* SIDEBAR ITEMS BUT ON TOP FOR MOBILE */
+  .item-list {
+    list-style: none;
+    width: 90%;
+    left: -2%;
+    top: 0.5%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+  }
+
+  .item {
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    /* align-self: stretch; */
+    padding: 0% 60%;
+    transition: all .5s ease;
+    position: fixed;
+    color: #989797;
+  }
+
+  .item:not(:last-child) {
+    position: fixed;
+    margin-bottom: 1%;
+  }
+
+  .item:hover {
+    color: white;
+    cursor: pointer;
+  }
+
+  .item-img {
+    position: fixed;
+    margin-right: 5vw;
+    margin-bottom: -4vh;
+    width: 10%;
+    height: 5%;
+    padding: -5% 5%;
+    transition: all .3s ease;
+  }
+
+  .item-img {
+    margin-right: 60%;
+    width: 1000%;
+    height: 10%;
+    padding: 0% 5%;
+    position: relative;
+    left: 35%;
+    /* justify-content: flex-end; */
+    transition: all .3s ease;
+  }
+
+
+  .item #instagram {
+    position: relative;
+    width: calc(3vh + 10vw);
+    height: calc(3vw + 6.8vh);
+    margin-left: 5%;
+    margin-top: -1%;
+  }
+
+  .item #etsy {
+    position: relative;
+    width: calc(3vh + 15vh);
+    height: calc(3vw + 7vh);
+    margin-left: -42vw;
+    margin-top: 1%;
+  }
+
+  .item #behance {
+
+    margin-left: -415%;
+    margin-top: 0%;
+    width: 18vw;
+    height: 11vh;
+  }
+
+  .item #flickr {
+    margin-left: -130%;
+    margin-top: -1%;
+    width: calc(3vh + 11vw);
+    height: calc(3vw + 7.5vh);
+  }
+
+  .item #dribble {
+    margin-left: -390%;
+    margin-top: -1%;
+    width: calc(3vh + 10vw);
+    height: calc(3vw + 6.5vh);
+
+  }
+
+  .item #pinterest {
+    width: calc(3vh + 12.5vw);
+    height: calc(3vw + 7.5vh);
+    margin-left: 100%;
+    margin-top: -1%;
+  }
+
+  /* Code for the HOVER effect on the list items */
+  .item::before {
+    transform: scaleY(0);
+    width: 10%;
+    transition: transform .2s ease, width .3s .2s ease;
+  }
+
+  .sub-item::before {
+    width: 0px;
+    transition: transform .1s ease, width .2s .1s ease;
+  }
+
+  .item::before,
+  .sub-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    visibility: hidden;
+    background: linear-gradient(to bottom right, #ff506e, black);
+    z-index: -1;
+  }
+
+  .item:hover::before {
+    transform: scaleY(1);
+    visibility: hidden;
+  }
+
+  .item:hover::before,
+  .sub-item:hover::before {
+    width: 100%;
+    visibility: hidden;
+  }
+
+  .active {
+    color: #989797;
+    /* background: linear-gradient(to bottom right, #ff506e, black); THIS MAKES THE FIRST BUTTON ALWAYS RED AND HIGHLIGHTED, WHICH WE DON'T WANT */
+  }
+
+  .nav-active {
+    color: #989797;
+  }
+
+  /* BOTTOM AND RIGHT BOARDERS OF IFRAME FOR MOBILE */
+  .bottom,
+  .right,
+  .mobile-left {
+    position: fixed;
+    background: black;
+  }
+
+  .right {
+    top: 0;
+    bottom: 0;
+    width: 4%;
+    right: 0;
+  }
+
+  .bottom {
+    left: 0;
+    right: 0;
+    height: 5.5%;
+    bottom: 0;
+  }
+
+  .mobile-left {
+    top: 10%;
+    bottom: 0;
+    width: 4%;
+    left: 0;
+  }
+
+
+  .iframe {
+    /* Mobile Iframe */
+    position: absolute;
+    margin-left: 4.05%;
+    bottom: 5.4%;
+    height: 84.2%;
+    width: 91.983%;
+    border: black;
+
+  }
+}
